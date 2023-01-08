@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tailwind.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Nunito+Sans&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>KickStart Labs - Secure the Future With Ledger</title>
+</head>
+<style>
+  .container-2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 50%;
+    /* 1:1 Aspect Ratio */
+  }
+
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+
+
+<body class="bg-black-900">
+  <div class="container mx-auto">
+    <header>
+      <div class="md:flex hidden items-center justify-between px-8 font-nutino-sans">
+        <a href="index.html" class="logo">
+          <img src="./assets/logo.png" alt="">
+        </a>
+
+        <div class="nav flex items-center gap-8">
+          <ul class="text-gray-400 text-lg flex justify-center gap-8 items-center">
+            <li><a href="index.html" class="text-zinc-100">Home</a></li>
+            <li><a href="services.html" class="hover:text-zinc-100">Services</a></li>
+            <li><a href="about.html" class="hover:text-zinc-100">About us</a></li>
+          </ul>
+
+          <div class="button">
+            <a href="contact.html">
+              <button
+                class="text-white py-2 px-8 rounded-sm border border-white hover:bg-zinc-100 hover:border-zinc-100">
+                Connect us
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:hidden flex items-center justify-between px-5 py-6 font-nutino-sans">
+        <a href="index.html" class="logo">
+          <img src="./assets/logo-2.png" alt="">
+        </a>
+
+        <div class="nav cursor-pointer" onclick="openSidebar()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+
+      <div
+        class="hidden sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-3/4 overflow-y-auto text-center font-nutino-sans font-semibold bg-black-100 z-20">
+        <div class="text-gray-100 text-xl">
+          <div class="p-2.5 mt-1 flex items-center">
+            <a href="index.html" class="logo">
+              <img src="./assets/logo.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 transition duration-500 cursor-pointer hover:bg-zinc-700 text-white">
+          <a href="index.html" class="text-lg ml-4 text-gray-200 font-bold">Home</a>
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-zinc-700 text-white">
+          <a href="services.html" class="text-lg ml-4 text-gray-200 font-bold">Services</a>
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-zinc-700 text-white">
+          <a href="about.html" class="text-lg ml-4 text-gray-200 font-bold">About us</a>
+        </div>
+        <div class="p-2.5 mt-6 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-zinc-700 text-white">
+          <a href="contact.html" class="text-lg ml-4 text-gray-200 font-bold">Contact</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="container mx-auto md:px-12 px-5">
+    <div class="lg:flex block items-center justify-between gap-8 pb-12">
+      <div class="section-txt lg:w-7/12 w-full mt-12">
+
+        <h1 class="md:text-7xl text-3xl text-white font-bold font-montserrat">
+          Plan Your<br>
+          <span class="font-romantic-couple text-zinc-100 md:text-8xl text-3xl">Project</span><br>
+          With Us
+        </h1>
+        <p class="pt-5 text-gray-400 font-nutino-sans text-lg leading-loose">Kickstart labs offer individuals to set up
+          their cryptocurrency ideas in real life through custom smart contracts, auditing, development, and launch.</p>
+        <a href="services.html">
+          <button
+            class="mt-8 py-3 px-8 bg-zinc-700 text-white text-xl rounded-sm flex items-center gap-3 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            Our Services
+            <span><svg width="12" height="13" viewBox="0 0 12 13" class="mt-1" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z"
+                  fill="white" />
+              </svg>
+            </span>
+          </button>
+        </a>
+      </div>
+
+      <div class="section-img lg:mt-0 mt-8">
+
+        <img src="./assets/future.png" alt="">
+        <span class="flex justify-between">
+          <img src="./assets/polygon-1.png" alt="">
+
+          <svg width="34" height="34" class="ml-8" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17 0.333328C18.1506 0.333328 19.0834 1.26607 19.0834 2.41666V14.9167H31.5834C32.734 14.9167 33.6667 15.8494 33.6667 17C33.6667 18.1506 32.734 19.0833 31.5834 19.0833H19.0834V31.5833C19.0834 32.7339 18.1506 33.6667 17 33.6667C15.8494 33.6667 14.9167 32.7339 14.9167 31.5833V19.0833H2.41671C1.26611 19.0833 0.333374 18.1506 0.333374 17C0.333374 15.8494 1.26611 14.9167 2.41671 14.9167H14.9167V2.41666C14.9167 1.26607 15.8494 0.333328 17 0.333328Z"
+              fill="#E7E7E7" />
+          </svg>
+        </span>
+
+      </div>
+    </div>
+
+    <!-- value section -->
+
+    <div class="value-section lg:pt-12 pt-5">
+
+      <span class="lg:block hidden absolute mt-5">
+        <svg width="99" height="32" viewBox="0 0 99 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L25.2781 26.2247L39.7483 8.60674L57.0497 26.2247L75.9238 8.60674L97 30" stroke="#E7E7E7"
+            stroke-width="4" />
+        </svg>
+      </span>
+      <h1 class="lg:text-5xl text-3xl font-montserrat text-white font-bold text-center">
+        We Offer
+        <span class="font-romantic-couple text-zinc-100">Values</span> to Our Clients
+      </h1>
+
+      <div class="lg:flex block items-center justify-between gap-16 py-16">
+        <div class="image">
+          <img src="./assets/value.png" alt="">
+        </div>
+
+        <div class="point-section font-nutino-sans lg:w-1/2 w-full">
+
+          <span class="flex justify-end">
+            <img src="./assets/circle.png" alt="">
+          </span>
+
+          <h3 class="text-gray-300 text-2xl font-semibold">
+            Kickstartlabs is known for its experienced, informative, and trustworthy blockchain developers
+          </h3>
+          <p class="text-gray-300 pt-3">Our team has done a series of notable work in the past. We offer value and
+            customer services to our clients.</p>
+
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-5">
+            <div>
+              <div class="icon py-3">
+                <img src="./assets/value2.png" alt="">
+              </div>
+              <a href="https://docs.pinksale.finance/important/safu-contract"
+                class="text-gray-300 text-xl font-semibold">
+                PinkSale Safu Badge
+              </a>
+              <p class="text-gray-300 pt-3 text-sm">Smart contracts of tokens engineered by our developers are rewarded
+                with safu badge by pinksale finance.</p>
+            </div>
+
+            <div>
+              <div class="icon py-3">
+                <img src="./assets/value3.png" alt="">
+              </div>
+              <a href="https://docs.pinksale.finance/important/audit-partners"
+                class="text-gray-300 text-xl font-semibold">
+                Audit Partners With Pinksale Finance
+              </a>
+              <p class="text-gray-300 pt-3 text-sm">We offer a clean audit report with GitHub link and certification
+                provided by our team. Our audited projects are rewarded with an audit badge by Pinksale Finance.</p>
+            </div>
+
+            <div>
+              <div class="icon py-3">
+                <img src="./assets/value-2.png" alt="">
+              </div>
+              <h3 class="text-gray-300 text-xl font-semibold">
+                Utility
+              </h3>
+              <p class="text-gray-300 pt-3 text-sm">We offer utilities for crypto-related projects. Our experienced
+                developers have built many top-class utilities and we have hundreds of satisfied clients.
+            </div>
+
+            <div>
+              <div class="icon py-3">
+                <img src="./assets/vilue-1.png" alt="">
+              </div>
+              <h3 class="text-gray-300 text-xl font-semibold">
+                Consulting
+              </h3>
+              <p class="text-gray-300 pt-3 text-sm">Kickstart labs offer consultancy services to guide you through your
+                journey. We help you with your project design, roadmaps, and marketing ideas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- service section -->
+
+    <div class="service-section lg:flex block justify-between items-center gap-8">
+      <div class="txt lg:w-7/12 w-full">
+
+        <span class="p-12">
+          <img src="./assets/polygon-1.png" alt="">
+        </span>
+
+        <h2 class="lg:text-6xl text-3xl font-montserrat text-white font-bold">
+          The
+          <span class="font-romantic-couple text-zinc-100">Services</span>
+          We
+          Provide For You
+        </h2>
+      </div>
+
+      <div class="service-img lg:mt-0 mt-6">
+        <img src="./assets/service-img.png" alt="">
+      </div>
+    </div>
+
+    <!-- work section -->
+
+    <div class="work-section py-20">
+      <div class="lg:flex block justify-between items-center gap-8">
+
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-5">
+
+          <div
+            class="bg-black-100 hover:bg-zinc-700 hover:drop-shadow-3xl px-3 pt-8 pb-5 rounded-2xl cursor-pointer transform duration-500 hover:-translate-y-10">
+            <div class="icon w-16 flex mx-auto">
+              <img src="./assets/work-1.png" alt="">
+            </div>
+            <h5 class="text-white pt-6 text-xl font-semibold font-montserrat">DAPPS</h5>
+            <p class="text-white pt-5 font-montserrat">Kickstart labs offers development services for
+              clients looking for new and existing dAPP concepts.</p>
+
+            <a href="contact.html">
+              <button
+                class="text-white font-nutino-sans font-lg py-2 px-3 mt-5 rounded-3xl flex items-center gap-2 bg-black-200">
+                Contact us
+                <span><svg width="9" height="10" viewBox="0 0 12 13" class="mt-1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z"
+                      fill="white" />
+                  </svg>
+                </span>
+              </button>
+            </a>
+          </div>
+
+          <div
+            class="bg-black-100 hover:bg-zinc-700 cursor-pointer px-3 pt-8 pb-6 rounded-2xl transform duration-500 hover:-translate-y-10">
+            <div class="icon w-16 flex mx-auto">
+              <img src="./assets/work-2.png" alt="">
+            </div>
+            <h5 class="text-white pt-6 text-xl font-semibold font-montserrat">Smart Chain
+              Contracts</h5>
+            <p class="text-white pt-5 font-montserrat">Our contract engineers are leaders in code,
+              development, deployment and excel in an assortment of smart contract logic requirements.</p>
+
+            <a href="contact.html">
+              <button
+                class="text-white font-nutino-sans font-lg py-2 px-3 mt-5 rounded-3xl flex items-center gap-2 bg-black-200">
+                Contact us
+                <span><svg width="9" height="10" viewBox="0 0 12 13" class="mt-1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z"
+                      fill="white" />
+                  </svg>
+                </span>
+              </button>
+            </a>
+          </div>
+
+          <div
+            class="bg-black-100 hover:bg-zinc-700 hover:drop-shadow-3xl cursor-pointer transform duration-500 hover:-translate-y-10 px-3 pt-8 pb-5 rounded-2xl">
+            <div class="icon w-16 flex mx-auto">
+              <img src="./assets/work-3.png" alt="">
+            </div>
+            <h5 class="text-white pt-6 text-xl font-semibold font-montserrat">Marketplaces</h5>
+            <p class="text-white pt-5 font-montserrat">NFTs are now transferable from one blockchain to
+              another. Being an integrated part of the platform. Kickstart labs brings you multi-chain
+              marketplace brings innovation in an interoperable environment.</p>
+
+            <a href="contact.html">
+              <button
+                class="text-white font-nutino-sans font-lg py-2 px-3 mt-5 rounded-3xl flex items-center gap-2 bg-black-200">
+                Contact us
+                <span><svg width="9" height="10" viewBox="0 0 12 13" class="mt-1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z"
+                      fill="white" />
+                  </svg>
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:mt-0 mt-8">
+          <h3 class=" text-white lg:text-4xl text-2xl font-semibold font-montserrat">Lets Work
+            together
+            starting today!</h3>
+
+          <a href="services.html">
+            <button
+              class="mt-8 py-3 px-5 bg-zinc-700 text-white text-lg font-nutino-sans rounded-sm flex items-center gap-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              Our Services
+              <span><svg width="12" height="13" viewBox="0 0 12 13" class="mt-1" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z"
+                    fill="white" />
+                </svg>
+              </span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- video section -->
+
+    <div class="lg:flex hidden justify-between">
+      <svg width="99" height="32" viewBox="0 0 99 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L25.2781 26.2247L39.7483 8.60674L57.0497 26.2247L75.9238 8.60674L97 30" stroke="#E7E7E7"
+          stroke-width="4" />
+      </svg>
+
+      <img src="./assets/circle.png" alt="">
+    </div>
+
+    <div class="lg:flex block justify-between gap-12 lg:py-12 py-5">
+      <div class="left">
+        <h3 class="lg:text-5xl text-3xl font-montserrat text-white font-bold">
+          Why we are the best
+          <span class="font-romantic-couple text-zinc-100">choice</span>
+        </h3>
+      </div>
+
+      <div class="right">
+        <p class="text-gray-300 font-nutino-sans">Watch this one minute video so you understand why you should use our
+          services!</p>
+      </div>
+    </div>
+
+    <div class="container-2 pb-8">
+      <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ZJ4YxIqUIZw">
+
+      </iframe>
+    </div>
+
+    <span>
+      <img src="./assets/circle.png" class="ml-6">
+    </span>
+
+    <!-- blue section -->
+
+    <div class="lg:py-20 py-8">
+      <div class="lg:p-15 p-8 bg-zinc-700 text-center rounded-2xl">
+
+        <div class="mb-5 flex items-center justify-center">
+          <img src="./assets/hand.png" alt="">
+          <h4 class="text-white text-3xl font-montserrat font-semibold">
+            Say Hello to Our Team
+          </h4>
+        </div>
+
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-8 place-items-center">
+          <div class="bg-white lg:w-72 w-full rounded-xl">
+            <a href="https://t.me/rana100x">
+              <img src="./assets/team-1.jpg" class="rounded-t-xl">
+              <div class="p-3">
+                <h5 class="font-montserrat font-bold text-2xl">Godfather Crypto</h5>
+                <p class="font-nutino-sans font-semibold text-xl pt-2 border border-transparent rounded-sm">
+                  Front-end & Full-Stack Dev.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="bg-white lg:w-72 w-full rounded-xl">
+            <a href="https://t.me/rogerz10x">
+              <img src="./assets/team-2.jpg" class="rounded-t-xl">
+              <div class="p-3">
+                <h5 class="font-montserrat font-bold text-2xl">Steve Rogers</h5>
+                <p class="font-nutino-sans font-semibold text-xl pt-2 border border-transparent rounded-sm">
+                  Raid Hero Contract Developer
+                  SAFU devs , Pinksale</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="bg-white lg:w-72 w-full rounded-xl">
+            <a href="https://t.me/rana10x">
+              <img src="./assets/team-3.jpg" class="rounded-t-xl">
+              <div class="p-3">
+                <h5 class="font-montserrat font-bold text-2xl">Alee</h5>
+                <p class="font-nutino-sans font-semibold text-xl pt-2 border border-transparent rounded-sm">
+                  UI/UX Designer Video graphics</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <h4 class="text-white lg:text-3xl xl font-montserrat font-semibold mt-6">
+          Click on pictures to reach them on their telegram handles
+        </h4>
+      </div>
+    </div>
+
+    <!-- last-section -->
+
+    <div class="lg:flex block justify-between items-center lg:pb-20 pb-8">
+      <h3 class=" text-white lg:text-5xl text-2xl font-bold font-montserrat leading-snug">Lets talk about your<br> next
+        project.
+      </h3>
+
+      <div class="button lg:mt-0 mt-6">
+        <a href="contact.html">
+          <button
+            class="text-white py-2 px-8 rounded-sm bg-zinc-700 font-nutino-sans transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            Contact us
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+
+  <footer class="bg-black-200">
+    <div class="container mx-auto py-8">
+      <div class="lg:flex block items-center justify-between px-8 font-nutino-sans">
+
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/logo-2.png" alt="">
+          </a>
+          <div class="flex items-center mt-4 gap-2">
+            <a href=""><img src="./assets/discord.png" alt="Discord"></a>
+            <a href="https://t.me/kickstartlabs"><img src="./assets/telegram.png" alt="Telegram"></a>
+            <a href="https://twitter.com/kickstartlabsio"><img src="./assets/twitter.png" alt="Twitter"></a>
+          </div>
+
+        </div>
+
+        <div class="nav lg:my-0 my-4">
+          <ul class="text-gray-400 lg:flex block justify-center gap-8 items-center">
+            <li><a href="" class="hover:text-zinc-100">Support</a></li>
+            <li><a href="" class="hover:text-zinc-100">Privacy Policy</a></li>
+            <li><a href="" class="hover:text-zinc-100">Terms and Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="copyright text-gray-400">
+          <p>&copy;
+            <script>document.write(new Date().getFullYear())</script> KickStart Labs<br> All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
