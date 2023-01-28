@@ -10,7 +10,7 @@ function sendEmail() {
         Password: "C2067376532D3DF7581B93C3C1B543979651",
         To: 'info@kickstartlabs.io',
         From: document.getElementById("email").value,
-        Subject: "New Contact Form Enquiry",
+        Subject: "New Contact Form Inquiry",
         Body: "First-Name: "
             + document.getElementById("f-name").value
             + "<br> Last-Name: "
